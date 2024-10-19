@@ -14,35 +14,35 @@
 
         <!-- Display -->
         <div id="display" class="bg-[#1a1e32] rounded p-4 ">
-            <input type="text" id="calcDisplay" class="block text-slate-500 text-lg font-bold text-right bg-[#1a1e32] max-w-full ml-auto mb-1">
-            <input type="text" id="mainDisplay" class="block text-white text-4xl font-bold text-right bg-[#1a1e32] max-w-full ml-auto">
+            <input type="text" id="calcDisplay" class="block text-slate-500 text-lg font-bold text-right bg-[#1a1e32] w-full  ml-auto mb-1" readonly>
+            <input type="text" id="currentDisplay" class="block text-white text-4xl font-bold text-right bg-[#1a1e32] w-full  ml-auto" readonly>
         </div>
 
         <!-- Keyboard -->
         <div id="keyboard" class="bg-[#272c43] text-2xl font-bold grid grid-cols-4 gap-4 my-4 rounded p-4 text-black">
             <!-- row -->
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">7</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">8</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">9</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(69,76,112)] bg-[#687097] rounded py-3 text-white uppercase">del</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>7</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>8</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>9</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(69,76,112)] bg-[#687097] rounded py-3 text-white uppercase" data-delete>del</button>
             <!-- row -->
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">4</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">5</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">6</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">+</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>4</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>5</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>6</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-operation>+</button>
             <!-- row -->
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">1</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">2</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">3</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">-</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>1</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>2</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>3</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-operation>-</button>
             <!-- row -->
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">.</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">0</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">/</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">*</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>.</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-number>0</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-operation>÷</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3" data-operation>x</button>
             <!-- row -->
-            <button class="relative shadow-[0_4px_0px_0px_rgb(69,76,112)] bg-[#687097] rounded py-3 text-white col-span-2 uppercase">reset</button>
-            <button class="relative shadow-[0_4px_0px_0px_rgb(135,48,30)] bg-[#bf3c22] rounded py-3 text-white col-span-2">=</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(69,76,112)] bg-[#687097] rounded py-3 text-white col-span-2 uppercase" data-reset>reset</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(135,48,30)] bg-[#bf3c22] rounded py-3 text-white col-span-2" data-equals>=</button>
         </div>
 
     </div>
@@ -51,7 +51,6 @@
     <script>
         //Get node list of all buttons
         const buttons = document.querySelectorAll("button");
-
         buttons.forEach(btn => {
             //Make buttons behave like real when pressed
             btn.onmousedown = function(){
@@ -64,7 +63,119 @@
             }
         });
 
+
+        class Calculator {
+            constructor(previousDisplay, currentDisplay) {
+                this.previousDisplay = previousDisplay;
+                this.currentDisplay = currentDisplay;
+                this.reset();
+            }
+
+            reset(){
+                this.currentDp = "";
+                this.previousDp = "";
+                this.operation = undefined;
+            }
+
+            delete(){
+                this.currentDp = this.currentDp.toString().slice(0, -1);
+            }
+
+            appendNumber(num){
+                if(num === "." && this.currentDp.includes(".")) return;
+                this.currentDp = this.currentDp.toString() + num.toString();
+            }
+
+            chooseOperation(operation){
+                if(this.currentDp === "" ) return;
+                if(this.previousDp !== ""){
+                    this.evaluate();
+                }
+                this.operation = operation;
+                this.previousDp = this.currentDp;
+                this.currentDp = "";
+            }
+
+            evaluate(){
+                let evaluation
+                const prev = parseFloat(this.previousDp);
+                const current = parseFloat(this.currentDp);
+                if(isNaN(prev) || isNaN(current)) return;
+                switch (this.operation) {
+                    case "+":
+                        evaluation = prev + current;
+                        break;
+                    case "-":
+                        evaluation = prev - current;
+                        break;
+                    case "÷":
+                        evaluation = prev / current;
+                        break;
+                    case "x":
+                        evaluation = prev * current;
+                        break;
+                    default:
+                        return;
+                }
+                this.currentDp = evaluation;
+                this.operation = undefined;
+                this.previousDp = "";
+            }
+
+            updateDisplay(){
+                this.currentDisplay.value = this.currentDp;
+                if(this.operation != null){
+                    this.previousDisplay.value = `${this.previousDp} ${this.operation}`;
+                }else{
+                    this.previousDisplay.value = this.previousDp;
+                }
+            }
+
+
+        }
+
+        //Get keyboard
+        const numberBtn = document.querySelectorAll("[data-number]");
+        const operationBtn = document.querySelectorAll("[data-operation]");
+        const deleteBtn = document.querySelector("[data-delete]");
+        const resetBtn = document.querySelector("[data-reset]");
+        const equalsBtn = document.querySelector("[data-equals]");
+
+        //Get displays
+        const previousDisplay = document.querySelector("#calcDisplay");
+        const currentDisplay = document.querySelector("#currentDisplay");
+
+
+        const calculator = new Calculator(previousDisplay, currentDisplay)
         
+        numberBtn.forEach(btn => {
+            btn.onclick = function(){
+                calculator.appendNumber(btn.innerText);
+                calculator.updateDisplay();
+            }
+        });
+
+        operationBtn.forEach(btn => {
+            btn.onclick = function(){
+                calculator.chooseOperation(btn.innerText);
+                calculator.updateDisplay();
+            }
+        });
+
+        equalsBtn.onclick = function(){
+            calculator.evaluate();
+            calculator.updateDisplay();
+        }
+
+        resetBtn.onclick = function(){
+            calculator.reset();
+            calculator.updateDisplay();
+        }
+
+        deleteBtn.onclick = function(){
+            calculator.delete();
+            calculator.updateDisplay();
+        }
 
 
     </script>
