@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-[#3e4563] h-screen w-full flex items-center justify-center">
+    
+    <div id="calculator" class="w-96 p-1">
+
+        <!-- Display -->
+        <div id="display" class="bg-[#1a1e32] rounded p-4 ">
+            <input type="text" id="calcDisplay" class="block text-slate-500 text-lg font-bold text-right bg-[#1a1e32] max-w-full ml-auto mb-1">
+            <input type="text" id="mainDisplay" class="block text-white text-4xl font-bold text-right bg-[#1a1e32] max-w-full ml-auto">
+        </div>
+
+        <!-- Keyboard -->
+        <div id="keyboard" class="bg-[#272c43] text-2xl font-bold grid grid-cols-4 gap-4 my-4 rounded p-4 text-black">
+            <!-- row -->
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">7</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">8</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">9</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(69,76,112)] bg-[#687097] rounded py-3 text-white uppercase">del</button>
+            <!-- row -->
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">4</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">5</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">6</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">+</button>
+            <!-- row -->
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">1</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">2</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">3</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">-</button>
+            <!-- row -->
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">.</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">0</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">/</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(178,164,154)] bg-[#e8e3dc] rounded py-3">*</button>
+            <!-- row -->
+            <button class="relative shadow-[0_4px_0px_0px_rgb(69,76,112)] bg-[#687097] rounded py-3 text-white col-span-2 uppercase">reset</button>
+            <button class="relative shadow-[0_4px_0px_0px_rgb(135,48,30)] bg-[#bf3c22] rounded py-3 text-white col-span-2">=</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        //Get node list of all buttons
+        const buttons = document.querySelectorAll("button");
+
+        buttons.forEach(btn => {
+            //Make buttons behave like real when pressed
+            btn.onmousedown = function(){
+                btn.classList.add("shadow-none");
+                btn.classList.add("-bottom-1");
+            };
+            btn.onmouseup = function(){
+                btn.classList.remove("shadow-none");
+                btn.classList.remove("-bottom-1");
+            }
+        });
+
+        
+
+
+    </script>
+
+
+
+</body>
+</html>
