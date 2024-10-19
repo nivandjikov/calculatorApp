@@ -49,10 +49,9 @@
 
 
     <script>
-        //Get node list of all buttons
+
         const buttons = document.querySelectorAll("button");
         buttons.forEach(btn => {
-            //Make buttons behave like real when pressed
             btn.onmousedown = function(){
                 btn.classList.add("shadow-none");
                 btn.classList.add("-bottom-1");
@@ -65,6 +64,8 @@
 
 
         class Calculator {
+
+            
             constructor(previousDisplay, currentDisplay) {
                 this.previousDisplay = previousDisplay;
                 this.currentDisplay = currentDisplay;
@@ -134,14 +135,12 @@
 
         }
 
-        //Get keyboard
         const numberBtn = document.querySelectorAll("[data-number]");
         const operationBtn = document.querySelectorAll("[data-operation]");
         const deleteBtn = document.querySelector("[data-delete]");
         const resetBtn = document.querySelector("[data-reset]");
         const equalsBtn = document.querySelector("[data-equals]");
 
-        //Get displays
         const previousDisplay = document.querySelector("#calcDisplay");
         const currentDisplay = document.querySelector("#currentDisplay");
 
@@ -176,8 +175,6 @@
             calculator.delete();
             calculator.updateDisplay();
         }
-
-
     </script>
 
 
